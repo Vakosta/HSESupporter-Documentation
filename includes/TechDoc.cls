@@ -167,7 +167,7 @@
     \renewcommand{\@author}{#2}
 }
 
-\newcommand{\@year}{2018}
+\newcommand{\@year}{2020}
 \renewcommand{\year}[1]{
     \renewcommand{\@year}{#1}
 }
