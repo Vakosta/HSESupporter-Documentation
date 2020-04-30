@@ -110,47 +110,98 @@
 
     \subsection{Описание интерфейса программы}
 
+    \subsubsection{Авторизация}
+
     \begin{enumerate}
         \item После первого запуска программы пользователь видит экран авторизации (Рис. 1).
         \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.4\linewidth]{images/login.png}}
             \caption{Экран авторизации}
-            \label{fig:mpr}
+            \label{fig:login}
         \end{figure}
 
         \newpage
         \item Для авторизации требуется сделать следующие действия:
         \begin{enumerate}
-            \item Ввести Email в домене @hse.ru или @edu.hse.ru и нажать кнопку <<Войти>> (Рис. 2);
+            \item Ввести Email в домене @hse.ru или @edu.hse.ru и нажать кнопку <<Войти>> (Рис.~\ref{ris:login_code});
             \item Ввести код подтверждения, который был отправлен на указанную почту и нажать кнопку <<Войти>>;
-            \item Указать действительные персональные данные (Рис. 3).
+            \item Указать действительные персональные данные (Рис.~\ref{ris:personal_data}).
         \end{enumerate}
         \begin{figure}[h]
             \begin{center}
                 \begin{minipage}[h]{0.4\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/login_code.png}}
                     \caption{После введения Email} %% подпись к рисунку
-                    \label{ris:experimoriginal} %% метка рисунка для ссылки на него
+                    \label{ris:login_code} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
                 \begin{minipage}[h]{0.4\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/login.png}}
                     \caption{Ввод персональных данных}
-                    \label{ris:experimcoded}
+                    \label{ris:personal_data}
                 \end{minipage}
             \end{center}
         \end{figure}
+
+        \item После успешной авторизации пользователь попадает на главный экран.
+        Управление происходит через нижнюю панель (Рис. ?), на которой располагаются кнопки:
+        \begin{itemize}[noitemsep]
+            \item Главная;
+            \item Обращения;
+            \item Общий чат;
+            \item О приложении;
+        \end{itemize}
     \end{enumerate}
 
-
-    \section{Используемая литература}
+    \subsubsection{Главная}
 
     \begin{enumerate}
-        \item Документация Microsoft, электронный справочник: https://docs.microsoft.com/ru-ru/
-        \item StackOverflow, электронный ресурс: https://stackoverflow.com/
-        \item Список дополняется\ldots
+        \item На главном экране (Рис.~\ref{ris:main_page}) располагаются новости общежития, важные уведомления вверху страницы,
+        а также кнопка <<Профиль>> для редактирования профиля.
+        \item Список новостей представляет из себя горизонтальную <<карусель>>, новости можно перелистывать движением пальца.
+        \item На любую новость можно нажать, чтобы посмотреть более подробную информацию.
+        \item Информацию главной страницы можно обновить, потянув страницу вверх до появления индикатора загрузки.
+
+        \item При нажатии на кнопку <<Профиль>> появляется экран (Рис.~\ref{ris:profile_page}) со следующими полями:
+        \begin{itemize}[noitemsep]
+            \item Имя;
+            \item Фамилия;
+            \item Общежитие;
+            \item Комната.
+        \end{itemize}
+        В каждое поле, кроме полей <<Имя>> и <<Фамилия>>, можно вносить изменения.
+        \begin{figure}[h]
+            \begin{center}
+                \begin{minipage}[h]{0.33\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/main_page.png}}
+                    \caption{Главный экран} %% подпись к рисунку
+                    \label{ris:main_page} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[h]{0.33\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/profile_page.png}}
+                    \caption{Профиль}
+                    \label{ris:profile_page}
+                \end{minipage}
+            \end{center}
+        \end{figure}
+
+        \item После изменений требуется нажать на кнопку <<Сохранить>>.
+        \item После сохранения изменений профиль пользователя попадает в очередь на модерацию введённых данных.
+
+
     \end{enumerate}
+
+
+    \begin{thebibliography}{3}
+        \bibitem{gost}Единая система программной документации – М.: ИПК, Издательство стандартов, 2000, 125 стр.
+        \bibitem{lms} LMS [Электронный ресурс] URL: \url{https://lms.hse.ru/} (Дата обращения: 30.04.2020, режим доступа: свободный)
+        \bibitem{ruz} РУЗ [Электронный ресурс] URL: \url{https://ruz.hse.ru/} (Дата обращения: 30.04.2020, режим доступа: свободный)
+        \bibitem{github} GitHub [Электронный ресурс] URL: \url{https://github.com/} (Дата обращения: 30.04.2020, режим доступа: свободный)
+        \bibitem{microsoft} Документация Microsoft [Электронный справочник] URL: \url{https://docs.microsoft.com/ru-ru/} (Дата обращения: 30.04.2020, режим доступа: свободный)
+        \bibitem{stackoverflow} StackOverflow [Электронный ресурс] URL: \url{https://stackoverflow.com/} (Дата обращения: 30.04.2020, режим доступа: свободный)
+    \end{thebibliography}
 
 
     \registrationList
