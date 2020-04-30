@@ -110,7 +110,38 @@
 
     \subsection{Описание интерфейса программы}
 
-    \ldots
+    \begin{enumerate}
+        \item После первого запуска программы пользователь видит экран авторизации (Рис. 1).
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.4\linewidth]{images/login.png}}
+            \caption{Экран авторизации}
+            \label{fig:mpr}
+        \end{figure}
+
+        \newpage
+        \item Для авторизации требуется сделать следующие действия:
+        \begin{enumerate}
+            \item Ввести Email в домене @hse.ru или @edu.hse.ru и нажать кнопку <<Войти>> (Рис. 2);
+            \item Ввести код подтверждения, который был отправлен на указанную почту и нажать кнопку <<Войти>>;
+            \item Указать действительные персональные данные (Рис. 3).
+        \end{enumerate}
+        \begin{figure}[h]
+            \begin{center}
+                \begin{minipage}[h]{0.4\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/login_code.png}}
+                    \caption{После введения Email} %% подпись к рисунку
+                    \label{ris:experimoriginal} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[h]{0.4\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/login.png}}
+                    \caption{Ввод персональных данных}
+                    \label{ris:experimcoded}
+                \end{minipage}
+            \end{center}
+        \end{figure}
+    \end{enumerate}
 
 
     \section{Используемая литература}
