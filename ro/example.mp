@@ -1,0 +1,26 @@
+input metauml;
+
+beginfig(1);
+    Class.A("A")()();
+    drawObject(A);
+endfig;
+
+beginfig(2);
+    save A;
+
+    Class.A("Point")
+       ("+x: int",
+        "+y: int") ();
+
+    Class.B("Circle")
+           ("radius: int")
+           ("+getRadius(): int",
+            "+setRadius(r: int):void");
+
+    topToBottom(45)(A, B);
+
+    drawObjects(A, B);
+
+    clink(aggregationUni)(A, B)
+endfig;
+end
