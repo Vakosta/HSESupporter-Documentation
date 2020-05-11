@@ -40,10 +40,13 @@
     \subsection{Функциональное назначение}
 
     Функциональным назначением программы является помощь и консультирование студентов по вопросам, связанным
-    с проживанием в общежитии. Студент может задать вопрос агенту поддержки, пообщаться в общем чате с другими
-    студентами из этого же общежития, узнать последние новости общежития. Агент поддержки имеет доступ к панели
-    администрирования, через которую он может создавать объявления, модерировать пользователей и их действия. Отвечать
-    на обращения пользователей агент поддержки может с помощью мобильного приложения.
+    с проживанием в общежитии.
+
+    Студент может задать вопрос агенту поддержки, пообщаться в общем чате с другими
+    студентами из этого же общежития, узнать последние новости общежития.
+
+    Агент поддержки имеет доступ к панели администрирования, через которую он может создавать объявления, модерировать пользователей и их действия.
+    Отвечать на обращения пользователей агент поддержки может с помощью мобильного приложения.
 
     \subsection{Эксплуатационное назначение}
 
@@ -108,14 +111,22 @@
 
     \subsection{Запуск программы}
 
-    \ldots
+    Для запуска программы требуется:
+    \begin{enumerate}
+        \item Скачать проект по ссылке: \url{https://github.com/Vakosta/HSESupporter}.
+        \item Открыть проект в Visual Studio или в Rider.
+        \item Собрать и установить проект на эмулятор или на физическое устройство с операционной системой iOS.
+        \item Если произведена установка на физическое устройство: после установки на устройство требуется зайти в
+        \textbf{Настройки > Основные > Об этом устройстве > Доверие сертификатам} и подтвердить сертификат разработчика.
+        \item Запустить приложение.
+    \end{enumerate}
 
     \subsection{Описание интерфейса программы}
 
     \subsubsection{Авторизация}
 
     \begin{enumerate}
-        \item После первого запуска программы пользователь видит экран авторизации (Рис. 1).
+        \item После первого запуска программы пользователь видит экран авторизации (Рис.~\ref{fig:login}).
         \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.4\linewidth]{images/login.png}}
@@ -132,14 +143,14 @@
         \end{enumerate}
         \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[h]{0.4\linewidth}
+                \begin{minipage}[ht]{0.4\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/login_code.png}}
                     \caption{После введения Email} %% подпись к рисунку
                     \label{ris:login_code} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[h]{0.4\linewidth}
-                    \frame{\includegraphics[width=1\linewidth]{images/login.png}}
+                \begin{minipage}[ht]{0.4\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/wait_page.png}}
                     \caption{Ввод персональных данных}
                     \label{ris:personal_data}
                 \end{minipage}
@@ -147,14 +158,23 @@
         \end{figure}
 
         \item После успешной авторизации пользователь попадает на главный экран.
-        Управление происходит через нижнюю панель (Рис. ?), на которой располагаются кнопки:
+        Управление происходит через нижнюю панель (Рис.~\ref{fig:menu}), на которой располагаются кнопки:
         \begin{itemize}[noitemsep]
             \item Главная;
             \item Обращения;
-            \item Общий чат;
+            \item Беседа;
             \item О приложении;
         \end{itemize}
     \end{enumerate}
+
+    \begin{figure}[ht]
+        \centering
+        \frame{\includegraphics[width=1\linewidth]{images/menu.png}}
+        \caption{Меню}
+        \label{fig:menu}
+    \end{figure}
+
+    \clearpage
 
     \subsubsection{Главная}
 
@@ -173,7 +193,7 @@
             \item Комната.
         \end{itemize}
         В каждое поле, кроме полей <<Имя>> и <<Фамилия>>, можно вносить изменения.
-        \begin{figure}[h]
+        \begin{figure}[ht]
             \begin{center}
                 \begin{minipage}[h]{0.33\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/main_page.png}}
@@ -192,8 +212,72 @@
         \item После изменений требуется нажать на кнопку <<Сохранить>>.
         \item После сохранения изменений профиль пользователя попадает в очередь на модерацию введённых данных.
 
-        \includegraphics{example.2}
+    \end{enumerate}
 
+    \clearpage
+
+    \subsubsection{Обращения}
+
+    \begin{figure}[ht]
+        \begin{center}
+            \begin{minipage}[h]{0.32\linewidth}
+                \frame{\includegraphics[width=1\linewidth]{images/problems_page.png}}
+                \caption{Список обращений} %% подпись к рисунку
+                \label{ris:problems} %% метка рисунка для ссылки на него
+            \end{minipage}
+            \hfill
+            \begin{minipage}[h]{0.32\linewidth}
+                \frame{\includegraphics[width=1\linewidth]{images/new_problem_page.png}}
+                \caption{Создание нового обращения}
+                \label{ris:new_problem}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[h]{0.32\linewidth}
+                \frame{\includegraphics[width=1\linewidth]{images/problem_details_page.png}}
+                \caption{Детальная информация обращения}
+                \label{ris:problem_details}
+            \end{minipage}
+        \end{center}
+    \end{figure}
+
+    \begin{enumerate}
+        \item На экране с обращениями (Рис.~\ref{ris:problems}) располагаются обращения, созданные пользователем.
+
+        \item Обращение можно создать, нажав на кнопку <<Добавить>> и введя необходимые данные в соответствующие поля (Рис.~\ref{ris:new_problem}).
+
+        \item После создания обращения оно появляется в списке обращений.
+        \item Для просмотра более подробной информации можно нажать на обращение.
+        \item На странице с подробной информацией обращения (Рис.~\ref{ris:problem_details}) находятся следующие элементы:
+        \begin{itemize}
+            \item заголовок;
+            \item подробное описание;
+            \item статус обращения;
+            \item дата создания;
+            \item диалог пользователя с агентом поддержки;
+        \end{itemize}
+
+        \item Для того, чтобы отправить сообщение в чат с агентом поддержки, требуется набрать текст
+        в соответствующее поле, а затем нажать на значок с бумажным самолётиком.
+
+        \item Для удаления обращения можно потянуть требуемое обращение влево, а затем нажать на красную кнопку <<Удалить>>.
+    \end{enumerate}
+
+    \clearpage
+
+    \subsubsection{Беседа}
+
+    \begin{enumerate}
+        \item Для просмотра списка сообщений беседы требуется открыть соответствующий экран (Рис.~\ref{fig:chat}), дополнительных действий не требуется.
+        \begin{figure}[ht]
+            \centering
+            \frame{\includegraphics[width=0.3\linewidth]{images/chat_page.png}}
+            \caption{Беседа общежития}
+            \label{fig:chat}
+        \end{figure}
+
+        \item Всё взаимодействие с беседой происходит внутри определённого общежития. У каждого общежития свои беседы и они не пересекаются.
+        \item Для отправки сообщения требуется ввести текст в соответствующее поле и нажать на кнопку с синим бумажным самолётиком.
+        \item Для обновления беседы требуется нажать на кнопку с иконкой круговой стрелки.
     \end{enumerate}
 
 
