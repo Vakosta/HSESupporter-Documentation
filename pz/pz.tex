@@ -480,6 +480,25 @@
     \newpage
 
     \begin{table}[ht]
+        \caption{\label{tab:class-itemsviewmodel-table}Описание полей, методов и свойств класса ItemsViewModel}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3.8cm}|p{3cm}|p{3cm}|}
+            \hline
+            \multicolumn{5}{|c|}{ItemsViewModel} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{p{6.5cm}|}{\textbf{Описание}} \\ \hline
+            Items & public & ObservableCollection <Problem> & \multicolumn{2}{p{6.5cm}|}{Коллекция с обращениями} \\ \hline
+            LoadItems Command & public & Command & \multicolumn{2}{p{6.5cm}|}{Хранит действие, которое воспроизводится при свайпе вверх} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            ItemsViewModel & public & void & - & Конструктор \\ \hline
+            ExecuteLoad ItemsCommand & private & Task & - & Загружает обращения \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
         \caption{\label{tab:class-itemdetailpage-table}Описание полей, методов и свойств класса ItemDetailPage}
         \centering
         \begin{tabular}{|p{2.9cm}|p{3cm}|p{2cm}|p{3cm}|p{5cm}|}
@@ -494,6 +513,26 @@
             ItemDetailPage & public & void & ItemDetail ViewModel viewModel & Конструктор \\ \hline
             InitItem & private & void & object sender, EventArgs e & Инициализирует страницу обращения \\ \hline
             SendButton \_OnClicked & private & void & object sender, EventArgs e & Отправляет сообщение в обращении \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-itemdetailviewmodel-table}Описание полей, методов и свойств класса ItemDetailViewModel}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3.8cm}|p{3cm}|p{3cm}|}
+            \hline
+            \multicolumn{5}{|c|}{ItemDetailViewModel} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{p{6.5cm}|}{\textbf{Описание}} \\ \hline
+            Item & public & Problem & \multicolumn{2}{p{6.5cm}|}{Содержит информацию о проблеме} \\ \hline
+            RefreshCommand Command & public & Command & \multicolumn{2}{p{6.5cm}|}{Хранит действие, которое воспроизводится при свайпе вверх} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            ItemsViewModel & public & void & - & Конструктор \\ \hline
+            InitItem & private & void & - & Инициализирует обращение \\ \hline
+            OnLoad & public & void & - & Отрисовывает обращение при успешной загрузке \\ \hline
         \end{tabular}
     \end{table}
 
@@ -520,6 +559,20 @@
     \newpage
 
     \begin{table}[ht]
+        \caption{\label{tab:class-chatviewmodel-table}Описание полей, методов и свойств класса ChatViewModel}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3.8cm}|p{3cm}|p{3cm}|}
+            \hline
+            \multicolumn{5}{|c|}{ChatViewModel} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            ChatViewModel & public & void & - & Конструктор \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
         \caption{\label{tab:class-aboutpage-table}Описание полей, методов и свойств класса AboutPage}
         \centering
         \begin{tabular}{|l|l|l|l|l|}
@@ -528,6 +581,23 @@
             \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
             \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
             AboutPage & public & void & - & Конструктор \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-aboutviewmodel-table}Описание полей, методов и свойств класса AboutViewModel}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3.8cm}|p{3cm}|p{3cm}|}
+            \hline
+            \multicolumn{5}{|c|}{AboutViewModel} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{p{6.5cm}|}{\textbf{Описание}} \\ \hline
+            OpenWeb Command & public & ICommand & \multicolumn{2}{p{6.5cm}|}{Содержит команду для открытия веб-страницы ВШЭ} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            AboutViewModel & public & void & - & Конструктор \\ \hline
         \end{tabular}
     \end{table}
 
@@ -583,6 +653,191 @@
             \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
             \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
             GetDateTimeText & public & string & this string str & Преобразует строку с датой в читаемый вид \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-authresult-table}Описание полей, методов и свойств класса AuthResult}
+        \centering
+        \begin{tabular}{|l|p{3cm}|l|p{3cm}|p{5cm}|}
+            \hline
+            \multicolumn{5}{|c|}{LoginPage} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Token & public & string & \multicolumn{2}{l|}{Токен авторизации} \\ \hline
+            IsAccept & public & bool & \multicolumn{2}{l|}{Подтверждён ли аккаунт администратором} \\ \hline
+            Profile & public & Profile & \multicolumn{2}{l|}{Данные профиля пользователя} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            LoginPage & public & void & - & Конструктор \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-dormitory-table}Описание полей, методов и свойств класса Dormitory}
+        \centering
+        \begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Dormitory} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID общежития} \\ \hline
+            Name & public & string & \multicolumn{2}{l|}{Название общежития} \\ \hline
+            Address & public & string & \multicolumn{2}{l|}{Адрес общежития} \\ \hline
+            Messages & public & List<Message> & \multicolumn{2}{p{7cm}|}{Сообщения в общем чате общежития} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            GetDictionary Params & public & Dictionary <string, object> & - & Возвращает словарь с параметрами для POST-запросов \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-problem-table}Описание полей, методов и свойств класса Problem}
+        \centering
+        \begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Problem} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID обращения} \\ \hline
+            Author & public & string & \multicolumn{2}{l|}{Автор обращения} \\ \hline
+            Title & public & string & \multicolumn{2}{l|}{Заголовок обращения} \\ \hline
+            Description & public & string & \multicolumn{2}{p{7cm}|}{Подробное описание обращения} \\ \hline
+            Status & public & string & \multicolumn{2}{p{7cm}|}{Статус обращения} \\ \hline
+            CreatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата создания обращения} \\ \hline
+            UpdatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата обновления обращения} \\ \hline
+            Messages & public & List<Message> & \multicolumn{2}{p{7cm}|}{Сообщения обращения} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            GetDictionary Params & public & Dictionary <string, object> & - & Возвращает словарь с параметрами для POST-запросов \\ \hline
+            CreatedAtBeauty & public & string & - & Возвращает красивую строку с датой \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-message-table}Описание полей, методов и свойств класса Message}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Problem} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID сообщения} \\ \hline
+            Author & public & int & \multicolumn{2}{l|}{ID автора сообщения} \\ \hline
+            AuthorFirstName & public & string & \multicolumn{2}{l|}{Имя автора сообщения} \\ \hline
+            AuthorFirstName & public & string & \multicolumn{2}{l|}{Фамилия автора сообщения} \\ \hline
+            Text & public & string & \multicolumn{2}{l|}{Текст сообщения} \\ \hline
+            CreatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата создания сообщения} \\ \hline
+            UpdatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата обновления сообщения} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            GetDictionary Params & public & Dictionary <string, object> & - & Возвращает словарь с параметрами для POST-запросов \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-notice-table}Описание полей, методов и свойств класса Notice}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Problem} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID новости} \\ \hline
+            Title & public & string & \multicolumn{2}{l|}{Заголовок новости} \\ \hline
+            Description & public & string & \multicolumn{2}{l|}{Описание новости} \\ \hline
+            IsImportant & public & string & \multicolumn{2}{l|}{Важная ли новость} \\ \hline
+            CreatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата создания новости} \\ \hline
+            UpdatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата обновления новости} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            GetDictionary Params & public & Dictionary <string, object> & - & Возвращает словарь с параметрами для POST-запросов \\ \hline
+            CreatedAtBeauty & public & string & - & Возвращает красивую строку с датой \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-profile-table}Описание полей, методов и свойств класса Profile}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Profile} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID профиля} \\ \hline
+            FirstName & public & string & \multicolumn{2}{l|}{Имя} \\ \hline
+            LastName & public & string & \multicolumn{2}{l|}{Фамилия} \\ \hline
+            Info & public & string & \multicolumn{2}{l|}{Дополнительная нформация о профиле} \\ \hline
+            Role & public & string & \multicolumn{2}{l|}{Роль: студент или агент поддержки} \\ \hline
+            Room & public & string & \multicolumn{2}{l|}{Комната} \\ \hline
+            Dormitory & public & Dormitory & \multicolumn{2}{l|}{Общежитие} \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-mainquestion-table}Описание полей, методов и свойств класса MainQuestion}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{MainQuestion} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Question & public & string & \multicolumn{2}{l|}{Вопрос} \\ \hline
+            Answer & public & string & \multicolumn{2}{l|}{Ответ} \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-event-table}Описание полей, методов и свойств класса Event}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{Event} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Id & public & int & \multicolumn{2}{l|}{ID новости} \\ \hline
+            Title & public & string & \multicolumn{2}{l|}{Заголовок новости} \\ \hline
+            Description & public & string & \multicolumn{2}{l|}{Описание новости} \\ \hline
+            TargetDate & public & string & \multicolumn{2}{l|}{Важная ли новость} \\ \hline
+            CreatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата создания новости} \\ \hline
+            UpdatedAt & public & string & \multicolumn{2}{p{7cm}|}{Дата обновления новости} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Методы}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \textbf{Аргументы} & \textbf{Назначение} \\ \hline
+            TargetDateBeauty & public & string & - & Дата проведения в формате читабельной строки \\ \hline
+            CreatedAtBeauty & public & string & - & Дата создания в формате читабельной строки \\ \hline
+        \end{tabular}
+    \end{table}
+
+    \newpage
+
+    \begin{table}[ht]
+        \caption{\label{tab:class-mainpagemodel-table}Описание полей, методов и свойств класса MainPage}
+        \centering
+        \begin{tabular}{|p{3.2cm}|p{3cm}|p{3cm}|p{2.6cm}|p{4cm}|}
+            \hline
+            \multicolumn{5}{|c|}{MainPage} \\ \hline
+            \multicolumn{5}{|l|}{\textbf{Свойства}} \\ \hline
+            \textbf{Имя} & \textbf{Модификатор доступа} & \textbf{Тип} & \multicolumn{2}{l|}{\textbf{Описание}} \\ \hline
+            Profile & public & Profile & \multicolumn{2}{l|}{Профиль пользователя} \\ \hline
+            Notices & public & List<Notice> & \multicolumn{2}{l|}{Новости общежития} \\ \hline
+            Events & public & List<Event> & \multicolumn{2}{l|}{События общежития} \\ \hline
+            MainQuestions & public & List <MainQuestion> & \multicolumn{2}{l|}{Популярные вопросы} \\ \hline
         \end{tabular}
     \end{table}
 
