@@ -162,7 +162,7 @@
 
     \begin{enumerate}
         \item При вводе почты в домене @hse.ru или @edu.hse.ru код подтверждения успешно отправляется на введённую почту (Рис.~\ref{fig:login_code_success}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.63\linewidth]{images/login_code_success.png}}
             \caption{Успешная отправка кода подтверждения}
@@ -170,7 +170,7 @@
         \end{figure}
 
         \item При первом входе отображается страница с вводом необходимых данных для работы приложения (Рис.~\ref{fig:wait_page})
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.63\linewidth]{images/wait_page.png}}
             \caption{Страница для ввода данных пользователя}
@@ -187,15 +187,15 @@
         \end{enumerate}
 
         \item Если возникает ошибка при загрузке главной страницы, сообщение сообщает об этом (Рис.~\ref{ris:main_page_error}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[ht]{0.3\linewidth}
+                \begin{minipage}[h]{0.3\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/main_page.png}}
                     \caption{Главная страница со всеми требуемыми разделами} %% подпись к рисунку
                     \label{ris:main_page} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[ht]{0.3\linewidth}
+                \begin{minipage}[h]{0.3\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/main_page_error.png}}
                     \caption{Ошибка при загрузке главной страницы}
                     \label{ris:main_page_error}
@@ -206,15 +206,15 @@
         \item При нажатии на кнопку <<Профиль>> отображается экран с полями для редактирования (Рис.~\ref{ris:profile}).
         Поля <<Имя>> и <<Фамилия>> являются некликабельными, поля <<Общежитие>> и <<Комната>> можно поменять.
         \item При невозможности сохранить профиль приложение сообщает об ошибке (Рис.~\ref{ris:profile_error}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/profile.png}}
                     \caption{Раздел <<Профиль>>} %% подпись к рисунку
                     \label{ris:profile} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/profile_error.png}}
                     \caption{Ошибка при сохранении профиля}
                     \label{ris:profile_error}
@@ -227,15 +227,15 @@
 
         \item Обращение можно создать, нажав на кнопку <<Создать>> и заполнив форму (Рис.~\ref{ris:create_new_problem}).
         \item После успешного создания обращения оно отображается в списке (Рис.~\ref{ris:problem_list}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[ht]{0.35\linewidth}
+                \begin{minipage}[h]{0.35\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/create_new_problem.png}}
                     \caption{Создание нового обращения} %% подпись к рисунку
                     \label{ris:create_new_problem} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[ht]{0.35\linewidth}
+                \begin{minipage}[h]{0.35\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/problem_list.png}}
                     \caption{Обращение добавлено в общий список обращений}
                     \label{ris:problem_list}
@@ -244,7 +244,7 @@
         \end{figure}
 
         \item Если при создании возникает ошибка, приложение сообщает об этом (Рис.~\ref{ris:create_new_problem_error}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.6\linewidth]{images/create_new_problem_error.png}}
             \caption{Главная страница со всеми требуемыми разделами}
@@ -252,19 +252,50 @@
         \end{figure}
 
         \item Чтобы открыть подробную информацию об обращении, на него требуется нажать.
-        На странице обращения (Рис.) можно отправить сообщение, заполнив форму и нажав на кнопку отправки.
-        Для обновления обращения можно потянуть страницу вверх до появления индикатора загрузки (Рис.).
+        На странице обращения (Рис.~\ref{ris:problem_input_message}) можно отправить сообщение, заполнив форму и нажав на кнопку отправки.
+        \item Для обновления обращения можно потянуть страницу вверх до появления индикатора загрузки (Рис.~\ref{ris:problem_list_refresh}).
+        \item Обращение можно удалить, если потянуть его влево и нажать на кнопку <<Удалить>> (Рис.~\ref{ris:problem_delete}).
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.6\linewidth]{images/problem_input_message.png}}
+            \caption{Форма для отправки сообщения агентам поддержки}
+            \label{ris:problem_input_message}
+        \end{figure}
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.6\linewidth]{images/problem_list_refresh.png}}
+            \caption{Обновление списка обращений}
+            \label{ris:problem_list_refresh}
+        \end{figure}
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.6\linewidth]{images/problem_delete.png}}
+            \caption{Удаление проблемы}
+            \label{ris:problem_delete}
+        \end{figure}
 
-        \item Обращение можно удалить, если потянуть его влево и нажать на кнопку <<Удалить>> (Рис.).
-
-        \item При нажатии на пункт меню <<Беседа>> отображается общий чат общежития (Рис.).
+        \item При нажатии на пункт меню <<Беседа>> отображается общий чат общежития (Рис.~\ref{ris:chat_page}).
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.35\linewidth]{images/chat_page.png}}
+            \caption{Страница чата}
+            \label{ris:chat_page}
+        \end{figure}
 
         \item На странице беседы можно отправить сообщение, заполнив форму и нажав на кнопку отправки.
 
         \item На странице беседы можно обновить список сообщений, нажав на кнопку обновления.
 
-        \item Если при отправке сообщения или обновлении беседы возникает ошибка, приложение сообщает об этом (Рис.).
+        \item Если при отправке сообщения или обновлении беседы возникает ошибка, приложение сообщает об этом (Рис.~\ref{ris:chat_page_error}).
+        \begin{figure}[h]
+            \centering
+            \frame{\includegraphics[width=0.6\linewidth]{images/chat_page_error.png}}
+            \caption{Информирование об ошибке при работе с чатом}
+            \label{ris:chat_page_error}
+        \end{figure}
     \end{enumerate}
+
+    \clearpage
 
     \subsection{Испытание выполнения требований к формату входных и выходных данных}
 
@@ -272,15 +303,15 @@
 
     \begin{enumerate}
         \item На экране авторизации: при вводе неверных данных (Рис.~\ref{ris:login_error_text}) или при вводе Email не в домене @hse.ru или @edu.hse.ru (Рис.~\ref{ris:login_error_email}) приложение отображает ошибку.
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/login_error_text.png}}
                     \caption{Ввод неверных данных} %% подпись к рисунку
                     \label{ris:login_error_text} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/login_error_email.png}}
                     \caption{Ввод Email не в домене @hse.ru или @edu.hse.ru}
                     \label{ris:login_error_email}
@@ -289,7 +320,7 @@
         \end{figure}
 
         \item На экране заполнения данных профиля: при отсутствующих значениях приложение просит заполнить все поля (Рис.~\ref{fig:wait_page_empty_labels}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.7\linewidth]{images/wait_page_empty_labels.png}}
             \caption{Попытка сохранить данные с пустыми полями}
@@ -297,13 +328,15 @@
         \end{figure}
 
         \item При попытке отправить пустое сообщение в общем чате или в обращении кнопка отправки будет неактивна (Рис.~\ref{fig:input_text}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.8\linewidth]{images/input_text.png}}
             \caption{Поле ввода сообщений в общем чате и в обращении}
             \label{fig:input_text}
         \end{figure}
     \end{enumerate}
+
+    \clearpage
 
     \subsection{Испытание выполнения требований к надёжности}
 
@@ -312,15 +345,15 @@
 
     \begin{enumerate}
         \item При попытке сделать неавторизованный запрос к любым методам, например, /main\_page (Рис.~\ref{ris:api_main_page}), /profile (Рис.~\ref{ris:api_profile}) сервер просит авторизоваться и не отображает информацию.
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \begin{center}
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/api_main_page.png}}
                     \caption{Ответ на неавторизованный запрос к методу /main\_page} %% подпись к рисунку
                     \label{ris:api_main_page} %% метка рисунка для ссылки на него
                 \end{minipage}
                 \hfill
-                \begin{minipage}[ht]{0.49\linewidth}
+                \begin{minipage}[h]{0.49\linewidth}
                     \frame{\includegraphics[width=1\linewidth]{images/api_profile.png}}
                     \caption{Ответ на неавторизованный запрос к методу /profile}
                     \label{ris:api_profile}
@@ -330,7 +363,7 @@
 
         \item При запросе на получение списка общежитий, авторизованный пользователь может просматривать
         сообщения из общего чата только своего общежития (Рис.~\ref{ris:api_dormitory_messages}).
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.49\linewidth]{images/api_dormitory_messages.png}}
             \caption{Список общежитий, где сообщения отображаются только у общежития №8, в котором проживает авторизованный пользователь}
@@ -339,19 +372,21 @@
 
         \item При запросе на просмотр списка обращений (Рис.~\ref{ris:api_problem_list}) сервер возвращает только обращения пользователя.
         В базе данных в это время находятся и другие обращения (Рис.~\ref{ris:api_full_problem_list}) от сторонних пользователей, которые сервер не отображает.
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.6\linewidth]{images/api_problem_list.png}}
             \caption{Список обращений, которые возвращает сервер}
             \label{ris:api_problem_list}
         \end{figure}
-        \begin{figure}[ht]
+        \begin{figure}[h]
             \centering
             \frame{\includegraphics[width=0.9\linewidth]{images/api_full_problem_list.png}}
             \caption{Полный список обращений в базе данных}
             \label{ris:api_full_problem_list}
         \end{figure}
     \end{enumerate}
+
+    \clearpage
 
     \subsection{Испытание выполнения требований к программной документации}
 
