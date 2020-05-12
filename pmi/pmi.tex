@@ -229,24 +229,86 @@
 
     Для проведения испытаний требуется запустить программу на эмуляторе или физическом устройстве под управлением операционной системы iOS\@.
 
+    \begin{enumerate}
+        \item На экране авторизации: при вводе неверных данных (Рис.~\ref{ris:login_error_text}) или при вводе Email не в домене @hse.ru или @edu.hse.ru (Рис.~\ref{ris:login_error_email}) приложение отображает ошибку.
+        \begin{figure}[ht]
+            \begin{center}
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/login_error_text.png}}
+                    \caption{Ввод неверных данных} %% подпись к рисунку
+                    \label{ris:login_error_text} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/login_error_email.png}}
+                    \caption{Ввод Email не в домене @hse.ru или @edu.hse.ru}
+                    \label{ris:login_error_email}
+                \end{minipage}
+            \end{center}
+        \end{figure}
+
+        \item На экране заполнения данных профиля: при отсутствующих значениях приложение просит заполнить все поля (Рис.~\ref{fig:wait_page_empty_labels}).
+        \begin{figure}[ht]
+            \centering
+            \frame{\includegraphics[width=0.7\linewidth]{images/wait_page_empty_labels.png}}
+            \caption{Попытка сохранить данные с пустыми полями}
+            \label{fig:wait_page_empty_labels}
+        \end{figure}
+
+        \item При попытке отправить пустое сообщение в общем чате или в обращении кнопка отправки будет неактивна (Рис.~\ref{fig:input_text}).
+        \begin{figure}[ht]
+            \centering
+            \frame{\includegraphics[width=0.8\linewidth]{images/input_text.png}}
+            \caption{Поле ввода сообщений в общем чате и в обращении}
+            \label{fig:input_text}
+        \end{figure}
+    \end{enumerate}
+
     \subsection{Испытание выполнения требований к надёжности}
 
     Для проведения испытаний требуется воспользоваться программой Postman для имитации HTTP-запросов.
     Требуется убедиться в надёжности REST методов сервера по адресу \url{https://hse-supporter.herokuapp.com/}.
 
     \begin{enumerate}
-        \item При попытке сделать неавторизованный запрос к методам /main\_page (Рис.~\ref{fig:api_main_page}), /profile (Рис.~\ref{fig:api_profile}) сервер просит авторизоваться и не отображает информацию.
+        \item При попытке сделать неавторизованный запрос к любым методам, например, /main\_page (Рис.~\ref{ris:api_main_page}), /profile (Рис.~\ref{ris:api_profile}) сервер просит авторизоваться и не отображает информацию.
+        \begin{figure}[ht]
+            \begin{center}
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/api_main_page.png}}
+                    \caption{Ответ на неавторизованный запрос к методу /main\_page} %% подпись к рисунку
+                    \label{ris:api_main_page} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/api_profile.png}}
+                    \caption{Ответ на неавторизованный запрос к методу /profile}
+                    \label{ris:api_profile}
+                \end{minipage}
+            \end{center}
+        \end{figure}
+
+        \item При запросе на получение списка общежитий, авторизованный пользователь может просматривать
+        сообщения из общего чата только своего общежития (Рис.~\ref{ris:api_dormitory_messages}).
         \begin{figure}[ht]
             \centering
-            \frame{\includegraphics[width=0.7\linewidth]{images/api_main_page.png}}
-            \caption{Ответ на неавторизованный запрос к методу /main\_page}
-            \label{fig:api_main_page}
+            \frame{\includegraphics[width=0.49\linewidth]{images/api_dormitory_messages.png}}
+            \caption{Список общежитий, где сообщения отображаются только у общежития №8, в котором проживает авторизованный пользователь}
+            \label{ris:api_dormitory_messages}
+        \end{figure}
+
+        \item При запросе на просмотр списка обращений (Рис.~\ref{ris:api_problem_list}) сервер возвращает только обращения пользователя.
+        В базе данных в это время находятся и другие обращения (Рис.~\ref{ris:api_full_problem_list}) от сторонних пользователей, которые сервер не отображает.
+        \begin{figure}[ht]
+            \centering
+            \frame{\includegraphics[width=0.9\linewidth]{images/api_problem_list.png}}
+            \caption{Список обращений, которые возвращает сервер}
+            \label{ris:api_problem_list}
         \end{figure}
         \begin{figure}[ht]
             \centering
-            \frame{\includegraphics[width=0.7\linewidth]{images/api_profile.png}}
-            \caption{Ответ на неавторизованный запрос к методу /profile}
-            \label{fig:api_profile}
+            \frame{\includegraphics[width=1\linewidth]{images/api_full_problem_list.png}}
+            \caption{Полный список обращений в базе данных}
+            \label{ris:api_full_problem_list}
         \end{figure}
     \end{enumerate}
 
