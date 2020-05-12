@@ -177,7 +177,7 @@
             \label{fig:wait_page}
         \end{figure}
 
-        \item После успешной авторизации отображается главная страница со всей необходимой информацией (Рис.~\ref{fig:main_page})
+        \item После успешной авторизации отображается главная страница со всей необходимой информацией (Рис.~\ref{ris:main_page})
         \begin{enumerate}
             \item общие данные пользователя;
             \item важные уведомления;
@@ -185,26 +185,71 @@
             \item предстоящие события;
             \item популярные вопросы;
         \end{enumerate}
+
+        \item Если возникает ошибка при загрузке главной страницы, сообщение сообщает об этом (Рис.~\ref{ris:main_page_error}).
         \begin{figure}[ht]
-            \centering
-            \frame{\includegraphics[width=0.3\linewidth]{images/main_page.png}}
-            \caption{Главная страница со всеми требуемыми разделами}
-            \label{fig:main_page}
+            \begin{center}
+                \begin{minipage}[ht]{0.3\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/main_page.png}}
+                    \caption{Главная страница со всеми требуемыми разделами} %% подпись к рисунку
+                    \label{ris:main_page} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[ht]{0.3\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/main_page_error.png}}
+                    \caption{Ошибка при загрузке главной страницы}
+                    \label{ris:main_page_error}
+                \end{minipage}
+            \end{center}
         \end{figure}
 
-        \item Если возникает ошибка при загрузке главной страницы, сообщение сообщает об этом (Рис.).
-
-        \item При нажатии на кнопку <<Профиль>> отображается экран с полями для редактирования (Рис.).
+        \item При нажатии на кнопку <<Профиль>> отображается экран с полями для редактирования (Рис.~\ref{ris:profile}).
         Поля <<Имя>> и <<Фамилия>> являются некликабельными, поля <<Общежитие>> и <<Комната>> можно поменять.
+        \item При невозможности сохранить профиль приложение сообщает об ошибке (Рис.~\ref{ris:profile_error}).
+        \begin{figure}[ht]
+            \begin{center}
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/profile.png}}
+                    \caption{Раздел <<Профиль>>} %% подпись к рисунку
+                    \label{ris:profile} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[ht]{0.49\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/profile_error.png}}
+                    \caption{Ошибка при сохранении профиля}
+                    \label{ris:profile_error}
+                \end{minipage}
+            \end{center}
+        \end{figure}
 
         \item При нажатии на пункт меню <<Обращения>> отображается список обращений.
-        Сначала этот список пустой (Рис.).
+        Сначала этот список пустой.
 
-        \item Обращение можно создать, нажав на кнопку <<Создать>> и заполнив форму (Рис.).
+        \item Обращение можно создать, нажав на кнопку <<Создать>> и заполнив форму (Рис.~\ref{ris:create_new_problem}).
+        \item После успешного создания обращения оно отображается в списке (Рис.~\ref{ris:problem_list}).
+        \begin{figure}[ht]
+            \begin{center}
+                \begin{minipage}[ht]{0.35\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/create_new_problem.png}}
+                    \caption{Создание нового обращения} %% подпись к рисунку
+                    \label{ris:create_new_problem} %% метка рисунка для ссылки на него
+                \end{minipage}
+                \hfill
+                \begin{minipage}[ht]{0.35\linewidth}
+                    \frame{\includegraphics[width=1\linewidth]{images/problem_list.png}}
+                    \caption{Обращение добавлено в общий список обращений}
+                    \label{ris:problem_list}
+                \end{minipage}
+            \end{center}
+        \end{figure}
 
-        \item После успешного создания обращения оно отображается в списке (Рис.).
-
-        \item Если при создании возникает ошибка, приложение сообщает об этом (Рис.).
+        \item Если при создании возникает ошибка, приложение сообщает об этом (Рис.~\ref{ris:create_new_problem_error}).
+        \begin{figure}[ht]
+            \centering
+            \frame{\includegraphics[width=0.6\linewidth]{images/create_new_problem_error.png}}
+            \caption{Главная страница со всеми требуемыми разделами}
+            \label{ris:create_new_problem_error}
+        \end{figure}
 
         \item Чтобы открыть подробную информацию об обращении, на него требуется нажать.
         На странице обращения (Рис.) можно отправить сообщение, заполнив форму и нажав на кнопку отправки.
@@ -220,10 +265,6 @@
 
         \item Если при отправке сообщения или обновлении беседы возникает ошибка, приложение сообщает об этом (Рис.).
     \end{enumerate}
-
-    \subsection{Испытание выполнения требований к интерфейсу}
-
-    Для проведения испытаний требуется запустить программу на эмуляторе или физическом устройстве под управлением операционной системы iOS\@.
 
     \subsection{Испытание выполнения требований к формату входных и выходных данных}
 
