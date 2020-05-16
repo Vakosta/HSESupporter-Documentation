@@ -1,0 +1,58 @@
+\documentclass{../includes/TechDoc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{inconsolata}
+\lstset{extendedchars=\true}
+
+\lstset{
+    basicstyle=\ttfamily,
+}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\title{Мобильное приложение для сообщений о бытовых проблемах студентов в общежитии}
+\author{Студент группы БПИ-194}{В. А. Анненков}
+\academicTeacher{Доцент департамента программной инженерии факультета компьютерных наук}{Х. М. Салех}
+
+\documentTitle{Сервер\\Текст программы}
+\documentCode{RU.17701729.02.07-01 12 01-1}
+
+\begin{document}
+    \maketitle
+
+    \tableofcontents
+
+
+    \section{Текст программы}
+
+    \subsection{admin.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/admin.py}
+
+    \subsection{apps.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/apps.py}
+
+    \subsection{exceptions.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/exceptions.py}
+
+    \subsection{models.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/models.py}
+
+    \subsection{serializers.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/serializers.py}
+
+    \subsection{views.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/api/views.py}
+
+    \subsection{settings.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/HSESupporterBackend/settings.py}
+
+    \subsection{urls.py}
+    \lstinputlisting[language=Python]{../../HSESupporterBackend/HSESupporterBackend/urls.py}
+
+
+    \registrationList
+
+\end{document}
